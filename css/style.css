@@ -10,6 +10,91 @@ body {
   background-color: #fff;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.content {
+  width: 700px;
+  height: 700px;
+  position: relative;
+  border: 2px solid #000;
+}
+
+.up {
+  position: absolute;
+  top: 25%;
+  left: 14%;
+  width: 500px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50px;
+}
+
+.line {
+  position: relative;
+  width: 6px;
+  height: 280px;
+  background-color: #000;
+  left: 12%;
+  top: 5px;
+}
+
+.line:not(:last-child) {
+  margin-right: 90px;
+}
+
+.circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #000;
+  top: 100%;
+  right: 800%;
+}
+
+.line:nth-child(1) {
+  animation: item 1s infinite alternate ease-out;
+  transform-origin: top;
+}
+
+@keyframes item {
+  0%{
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(20deg);
+  }
+}
+
+.line:nth-child(5) {
+  animation: item-s 1s infinite alternate ease-out;
+  animation-delay: 1s;
+  transform-origin: top;
+}
+
+@keyframes item-s {
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(-20deg);
+  }
+}
+
+
+
+.up-list {
+  list-style-type: none;
+}
+
 
